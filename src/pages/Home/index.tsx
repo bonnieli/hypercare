@@ -35,8 +35,6 @@ const HomePage = () => {
         <Box>Loading...</Box>
       ) : (
         <Stack flexDirection="row" flexWrap="wrap" justifyContent="center">
-          hi {users.length}
-          {!users && "None"}
           {users && users.map((user) => <UserCard user={user} key={user.id} />)}
         </Stack>
       )}
