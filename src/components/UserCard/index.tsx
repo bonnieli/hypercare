@@ -16,7 +16,12 @@ const UserCard = ({ user }: UserCardProps) => {
   };
 
   return (
-    <Stack justifyContent="center" alignItems="center" sx={styles.root}>
+    <Stack
+      justifyContent="center"
+      alignItems="center"
+      sx={styles.root}
+      data-testid="user-card"
+    >
       <Box sx={styles.header}>
         <Box sx={styles.headerContent}>
           <Box sx={styles.avatar}>

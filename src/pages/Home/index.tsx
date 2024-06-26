@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { UsersContext } from "../../contexts/users";
 import { useCallback, useContext, useEffect, useState } from "react";
 import UserCard from "../../components/UserCard";
@@ -30,18 +30,15 @@ const HomePage = () => {
 
   return (
     <Box>
-      Home
+      <Typography variant="h2">Home</Typography>
       {usersLoading ? (
         <Box>Loading...</Box>
       ) : (
-        <Box>
-          {users &&
-            users.map((user) => (
-              <Box key={user.id}>
-                <UserCard user={user} />
-              </Box>
-            ))}
-        </Box>
+        <Stack flexDirection="row" flexWrap="wrap" justifyContent="center">
+          hi {users.length}
+          {!users && "None"}
+          {users && users.map((user) => <UserCard user={user} key={user.id} />)}
+        </Stack>
       )}
     </Box>
   );

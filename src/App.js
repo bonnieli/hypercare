@@ -1,16 +1,14 @@
 import HomePage from "./pages/Home";
 import { UsersProvider } from "./contexts/users";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme";
 
 export default function App() {
-  return <NoMatch />;
-}
-
-function NoMatch() {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <UsersProvider>
         <HomePage />
       </UsersProvider>
-    </div>
+    </ThemeProvider>
   );
 }

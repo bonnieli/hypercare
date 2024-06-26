@@ -2,7 +2,7 @@ const defaultStyles = {
   root: {
     borderRadius: 4,
     overflow: "hidden",
-    width: 300,
+    width: { xs: "100%", sm: 300 },
     m: 2,
     boxShadow: 4,
   },
